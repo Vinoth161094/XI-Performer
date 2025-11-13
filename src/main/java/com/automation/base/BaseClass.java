@@ -38,7 +38,7 @@ public class BaseClass {
         }
     }
 
-    public static void initialization() {
+    public void initialization() {
         String browser = prop.getProperty("browser");
 
         if (browser.equalsIgnoreCase("chrome")) {

@@ -18,7 +18,7 @@ public class json_data {
 	
 public JSONObject getdatafile(String filename,int i) {
 	
-	String datafilepath = "./TestData/testdata.json";
+	String datafilepath = "./JSON Test Data/testdata.json";
 	try {
 		FileReader fi = new FileReader(datafilepath);
 		JSONParser parser = new JSONParser();
