@@ -1,0 +1,99 @@
+package com.XIPerformer.util;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellValue;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.FormulaEvaluator;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtil {
+	
+	public static Object[][] getExcelData(String filePath, String sheetName) throws IOException {
+
+	    FileInputStream fis = new FileInputStream(filePath);
+	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    Sheet sheet = workbook.getSheet(sheetName);
+
+	    int rowCount = sheet.getPhysicalNumberOfRows();
+	    int colCount = sheet.getRow(0).getLastCellNum();
+
+	    Object[][] data = new Object[rowCount - 1][colCount];
+
+	    for (int i = 1; i < rowCount; i++) {
+	        Row row = sheet.getRow(i);
+	        for (int j = 0; j < colCount; j++) {
+	            Cell cell = (row == null) ? null : row.getCell(j, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+	            Object cellValue = getCellValue(cell);
+
+	            if (j == 4) { 
+	                String value = cellValue.toString()
+	                        .replace("[", "")
+	                        .replace("]", "")
+	                        .replace("\"", "")
+	                        .trim();
+	                String[] focusArray = value.split(",");
+	                for (int k = 0; k < focusArray.length; k++) {
+	                    focusArray[k] = focusArray[k].trim();
+	                }
+	                data[i - 1][j] = focusArray;
+	            } else {
+	                data[i - 1][j] = cellValue;
+	            }
+	        }
+	    }
+
+	    workbook.close();
+	    fis.close();
+	    return data;
+	}
+
+
+	private static Object getCellValue(Cell cell) {
+	    if (cell == null) return "";
+
+	    switch (cell.getCellType()) {
+	        case STRING:
+	            return cell.getStringCellValue().trim();
+
+	        case NUMERIC:
+	            if (DateUtil.isCellDateFormatted(cell)) {
+	                return cell.getDateCellValue();
+	            } else {
+	                double numericValue = cell.getNumericCellValue();
+	                if (numericValue == Math.floor(numericValue)) {
+	                    return String.valueOf((long) numericValue);
+	                }
+	                return String.valueOf(numericValue);
+	            }
+
+	        case BOOLEAN:
+	            return String.valueOf(cell.getBooleanCellValue());
+
+	        case FORMULA:
+	            try {
+	                FormulaEvaluator evaluator = cell.getSheet().getWorkbook().getCreationHelper().createFormulaEvaluator();
+	                CellValue evaluatedValue = evaluator.evaluate(cell);
+	                switch (evaluatedValue.getCellType()) {
+	                    case STRING:
+	                        return evaluatedValue.getStringValue();
+	                    case NUMERIC:
+	                        return String.valueOf(evaluatedValue.getNumberValue());
+	                    case BOOLEAN:
+	                        return String.valueOf(evaluatedValue.getBooleanValue());
+	                    default:
+	                        return "";
+	                }
+	            } catch (Exception e) {
+	                return cell.getCellFormula();
+	            }
+
+	        default:
+	            return "";
+	    }
+	}
+}

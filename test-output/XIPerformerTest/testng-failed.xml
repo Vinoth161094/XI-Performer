@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [XIPerformerTest]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="methods" name="XIPerformerTest(failed)">
+    <classes>
+      <class name="com.XIPerformer.testcases.SanityTestCases">
+        <methods>
+          <include name="teardown"/>
+          <include name="journey" invocation-numbers="4"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.XIPerformer.testcases.SanityTestCases -->
+    </classes>
+  </test> <!-- XIPerformerTest(failed) -->
+</suite> <!-- Failed suite [XIPerformerTest] -->
