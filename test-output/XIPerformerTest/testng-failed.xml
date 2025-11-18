@@ -6,8 +6,10 @@
       <class name="com.XIPerformer.testcases.SanityTestCases">
         <methods>
           <include name="teardown"/>
-          <include name="journey" invocation-numbers="4"/>
           <include name="setup"/>
+          <include name="combinationMaster" invocation-numbers="0 1 2 3 4"/>
+          <include name="combinationmasterClick"/>
+          <include name="submitButton"/>
         </methods>
       </class> <!-- com.XIPerformer.testcases.SanityTestCases -->
     </classes>

@@ -11,6 +11,12 @@ public class DataProviderClass {
 	        String filePath = System.getProperty("user.dir") + "\\Test Data\\ExeciseData.xlsx";
 	        return ExcelUtil.getExcelData(filePath, "Sheet1");
 	    }
+	 
+	 @DataProvider(name = "CombinationData")
+	    public Object[][] getComData() throws Exception {
+	        String filePath = System.getProperty("user.dir") + "\\Test Data\\CombinationMasterTD.xlsx";
+	        return ExcelUtil.getExcelData1(filePath, "Sheet2");
+	    }
 	}
 
 

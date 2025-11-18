@@ -1,13 +1,11 @@
 package com.XIPerformer.pageobject;
 
 import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automation.base.BaseClass;
-
 
 
 public class HomePage extends BaseClass {
@@ -96,6 +94,8 @@ public void PageHome(String exerciseName, String categoryValue, String typeValue
         String keyTipsValue, String uploadImageValue, String uploadVideoValue)
         throws InterruptedException {
 
+	Thread.sleep(3000);
+	
 	exercise.click();
 	addButton.click();
     exercisename.sendKeys(exerciseName);
@@ -128,10 +128,9 @@ uploadVideo.sendKeys(uploadVideoValue);
     Thread.sleep(5000);
     
     String successText = Message.getText();
-    System.out.println(successText);
 
     if (successText.equals("The Exercise has been created successfully!")) {
-    System.out.println("Exercise created successfully!");
+System.out.println("Exercise created successfully!");
 } else {
 	System.out.println("Exercise not created — it may already exist!");
     }

@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -51,7 +52,6 @@ public class BaseClass {
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
     }
 
@@ -82,6 +82,17 @@ public void dropdownClick(List<WebElement> options, String value ) {
 		        break;
 		    }
 		}
-	}       
+	} 
+
+public void clearField(WebElement element) {
+    element.click();
+    String text = element.getAttribute("value");
+    System.out.println(text);
+
+    for (int i = 0; i < text.length(); i++) {
+        element.sendKeys(Keys.BACK_SPACE);
+    }
+}
+
        
 }

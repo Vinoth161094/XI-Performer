@@ -1,11 +1,16 @@
 package com.XIPerformer.actiondrivers;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.json.simple.JSONObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.XIPerformer.util.json_data;
 import com.automation.base.BaseClass;
@@ -25,7 +30,26 @@ public class action  extends BaseClass {
 		
 	}
 	
-	public void paymentdetails(String filename, int i) {
+	public void setImplicitWait() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    public void waitForVisibility(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void jsClick(WebElement element) {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", element);
+            System.out.println("Clicked successfully using JavaScript: " + element);
+        } catch (Exception e) {
+            System.out.println("Unable to click using JavaScript: " + e.getMessage());
+        }
+    }
+	
+	public void details(String filename, int i) {
 		js.getdatafile(filename, i);
 		
 		String fn = jobj.get("firsrname").toString();
