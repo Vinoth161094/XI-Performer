@@ -37,16 +37,17 @@ public class SanityTestCases extends BaseClass {
 		
 	}
 	
-	@Test(priority = 2, enabled = false, dataProvider = "ExeciseData", dataProviderClass = DataProviderClass.class)
+	@Test(priority = 2, enabled = true, dataProvider = "ExeciseData", dataProviderClass = DataProviderClass.class)
 	public void execisejourney(String exercise, String categoryValue, String typeValue, String unitValue,
 	                    String[] focusAreaValue, String instructionValue, String keyTipsValue,
 	                    String uploadImageValue, String uploadVideoValue) throws InterruptedException {
 
+		home.ExerciseMaster();
 	    home.PageHome(exercise, categoryValue, typeValue, unitValue, focusAreaValue,
 	                  instructionValue, keyTipsValue, uploadImageValue, uploadVideoValue);
 	}
 	
-	@Test(priority = 3, enabled =false)
+	@Test(priority = 3, enabled =true)
 	public void downloadExecise() throws InterruptedException {
 		
 		home.downloadExeciseList();

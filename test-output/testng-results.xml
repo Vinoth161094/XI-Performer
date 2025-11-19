@@ -1,29 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-18T18:34:50 IST" name="XIPerformerTest" finished-at="2025-11-18T18:37:14 IST" duration-ms="144210">
+  <suite started-at="2025-11-19T10:24:13 IST" name="XIPerformerTest" finished-at="2025-11-19T10:30:01 IST" duration-ms="348091">
     <groups>
     </groups>
-    <test started-at="2025-11-18T18:34:50 IST" name="XIPerformerTest" finished-at="2025-11-18T18:37:14 IST" duration-ms="144210">
+    <test started-at="2025-11-19T10:24:13 IST" name="XIPerformerTest" finished-at="2025-11-19T10:30:01 IST" duration-ms="348091">
       <class name="com.XIPerformer.testcases.SanityTestCases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:34:50 IST" name="setup" finished-at="2025-11-18T18:35:11 IST" duration-ms="21341" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:24:13 IST" name="setup" finished-at="2025-11-19T10:24:23 IST" duration-ms="9203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginjourney()[pri:1, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:35:11 IST" name="loginjourney" finished-at="2025-11-18T18:35:15 IST" duration-ms="3569" status="PASS">
+        <test-method signature="loginjourney()[pri:1, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:24:23 IST" name="loginjourney" finished-at="2025-11-19T10:24:27 IST" duration-ms="3981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginjourney -->
-        <test-method signature="combinationmasterClick()[pri:4, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:35:15 IST" name="combinationmasterClick" finished-at="2025-11-18T18:35:24 IST" duration-ms="9825" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- combinationmasterClick -->
-        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:35:26 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-18T18:35:48 IST" duration-ms="21732" status="PASS">
+        <test-method signature="execisejourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,[Ljava.lang.String;,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:24:30 IST" name="execisejourney" data-provider="ExeciseData" finished-at="2025-11-19T10:25:10 IST" duration-ms="40794" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[pull ups spl]]>
+                <![CDATA[Lat Pushdown]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[workout]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Warm Up]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Count]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[[Ljava.lang.String;@1df8b5b8]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Purpose: Strengthens lats, traps, and rhomboids.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Focus on Form: Keep your back straight; avoid rounding your spine.]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\\Users\\vinot\\Downloads\\OIP.jpeg]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://www.youtube.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execisejourney -->
+        <test-method signature="execisejourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,[Ljava.lang.String;,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:25:10 IST" name="execisejourney" data-provider="ExeciseData" finished-at="2025-11-19T10:25:49 IST" duration-ms="38722" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[T-Bar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[workout]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Warm Up]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Count]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[[Ljava.lang.String;@23202fce]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Purpose: Strengthens lats, traps, and rhomboids.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Focus on Form: Keep your back straight; avoid rounding your spine.]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\\Users\\vinot\\Downloads\\OIP.jpeg]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://www.youtube.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execisejourney -->
+        <test-method signature="execisejourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,[Ljava.lang.String;,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:25:49 IST" name="execisejourney" data-provider="ExeciseData" finished-at="2025-11-19T10:26:28 IST" duration-ms="38975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[workout]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Warm Up]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Count]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7d94beb9]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Purpose: Strengthens lats, traps, and rhomboids.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Focus on Form: Keep your back straight; avoid rounding your spine.]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\\Users\\vinot\\Downloads\\OIP.jpeg]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://www.youtube.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execisejourney -->
+        <test-method signature="execisejourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,[Ljava.lang.String;,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:26:28 IST" name="execisejourney" data-provider="ExeciseData" finished-at="2025-11-19T10:27:07 IST" duration-ms="39310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lat Pulldown]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Technique]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Warm Down]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Count]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[[Ljava.lang.String;@560348e6]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Purpose: Strengthens lats, traps, and rhomboids.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Focus on Form: Keep your back straight; avoid rounding your spine.]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\\Users\\vinot\\Downloads\\OIP.jpeg]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://www.youtube.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execisejourney -->
+        <test-method signature="execisejourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,[Ljava.lang.String;,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:27:07 IST" name="execisejourney" data-provider="ExeciseData" finished-at="2025-11-19T10:27:46 IST" duration-ms="38816" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[T-Bar Row]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Technique]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Running]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Second]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7b993c65]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Purpose: Strengthens lats, traps, and rhomboids.]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Focus on Form: Keep your back straight; avoid rounding your spine.]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\\Users\\vinot\\Downloads\\OIP.jpeg]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[https://www.youtube.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execisejourney -->
+        <test-method signature="downloadExecise()[pri:3, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:27:46 IST" name="downloadExecise" finished-at="2025-11-19T10:27:46 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadExecise -->
+        <test-method signature="combinationmasterClick()[pri:4, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:27:46 IST" name="combinationmasterClick" finished-at="2025-11-19T10:27:55 IST" duration-ms="8943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- combinationmasterClick -->
+        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:27:56 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-19T10:28:21 IST" duration-ms="25870" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pull ups special]]>
               </value>
             </param>
             <param index="1">
@@ -80,7 +339,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- combinationMaster -->
-        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:35:48 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-18T18:36:08 IST" duration-ms="20576" status="PASS">
+        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:28:21 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-19T10:28:46 IST" duration-ms="24059" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -141,7 +400,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- combinationMaster -->
-        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:36:08 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-18T18:36:29 IST" duration-ms="20594" status="PASS">
+        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:28:46 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-19T10:29:10 IST" duration-ms="23984" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -202,7 +461,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- combinationMaster -->
-        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:36:29 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-18T18:36:49 IST" duration-ms="20371" status="PASS">
+        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:29:10 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-19T10:29:33 IST" duration-ms="23638" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -263,7 +522,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- combinationMaster -->
-        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:36:49 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-18T18:37:10 IST" duration-ms="20879" status="PASS">
+        <test-method signature="combinationMaster(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:29:33 IST" name="combinationMaster" data-provider="CombinationData" finished-at="2025-11-19T10:29:58 IST" duration-ms="24378" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -324,11 +583,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- combinationMaster -->
-        <test-method signature="submitButton()[pri:6, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:37:10 IST" name="submitButton" finished-at="2025-11-18T18:37:10 IST" duration-ms="206" status="PASS">
+        <test-method signature="submitButton()[pri:6, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:29:58 IST" name="submitButton" finished-at="2025-11-19T10:29:58 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitButton -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-18T18:37:10 IST" name="teardown" finished-at="2025-11-18T18:37:14 IST" duration-ms="3414" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.XIPerformer.testcases.SanityTestCases@5c7933ad]" started-at="2025-11-19T10:29:58 IST" name="teardown" finished-at="2025-11-19T10:30:01 IST" duration-ms="3547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

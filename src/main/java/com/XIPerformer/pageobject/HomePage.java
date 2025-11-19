@@ -89,6 +89,15 @@ WebElement Message;
 
 
 
+public void ExerciseMaster() throws InterruptedException {
+	
+	Thread.sleep(5000);
+
+	
+	exercise.click();
+
+}
+
 public void PageHome(String exerciseName, String categoryValue, String typeValue,
         String unitValue, String[] focusAreaValue, String instructionValue,
         String keyTipsValue, String uploadImageValue, String uploadVideoValue)
@@ -96,7 +105,6 @@ public void PageHome(String exerciseName, String categoryValue, String typeValue
 
 	Thread.sleep(3000);
 	
-	exercise.click();
 	addButton.click();
     exercisename.sendKeys(exerciseName);
 
@@ -125,9 +133,12 @@ uploadImage.sendKeys(uploadImageValue);
 uploadVideo.sendKeys(uploadVideoValue);
 
      submitButton.click();
-    Thread.sleep(5000);
-    
+     
+    Thread.sleep(8000);
+    Thread.sleep(3000);
+
     String successText = Message.getText();
+    System.out.println(successText);
 
     if (successText.equals("The Exercise has been created successfully!")) {
 System.out.println("Exercise created successfully!");
@@ -136,7 +147,8 @@ System.out.println("Exercise created successfully!");
     }
 
     
-    
+    Thread.sleep(3000);
+
 
      okButton.click();
      Thread.sleep(3000);
