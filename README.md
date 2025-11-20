@@ -67,9 +67,10 @@ Step 10: Create Test Classes
 Location: src/test/java
 Create test packages:
 * Sanity or Regression
-* Each class contains @Test methods
+* Each class contains @Test methods 
 * Use POM classes to perform actions
-
+  @BeforeClass will be executed before the class start its execution
+  @AfterClass will be executed after the class start its execution
 
 Steps 11 : create the testng,xml to run the test classses
 Right-click project → TestNG → Convert to TestNG
@@ -79,6 +80,10 @@ Add the test classes you want to execute
 Step 12: Execute the Test Suite
 Right-click testng.xml → Run As → TestNG Suite
 Maven downloads dependencies and tests execute.
+
+Step 13 : After completing the Execution
+In the Test-output floder -> emailablereport.html 
+Purpose : we can see the Reports for Test Execution.
 
 
 
