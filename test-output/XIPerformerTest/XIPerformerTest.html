@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>XIPerformerTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 19 10:24:13 IST 2025</td>
+<td>Started on:</td><td>Sat Nov 22 16:34:44 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>348 seconds (348091 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105064 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,93 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.XIPerformer.testcases.SanityTestCases.newPreparationwithdataEdit()'><b>newPreparationwithdataEdit</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: Exercise 4, 1</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.135)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d4c42dff24e4323815169d7db38687d9, findChildElements {using=tag name, value=td, id=f.605864C31A81A54D0D5514B5DF1D7A9A.d.B01D308784DE5AD60C39252EEF681D16.e.787}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\vinot\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53333}, goog:processID: 28248, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53333/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d4c42dff24e4323815169d7db38687d9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:369)
+	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:203)
+	at com.XIPerformer.pageobject.NewPreparationPage.tableDataEdit(NewPreparationPage.java:360)
+	at com.XIPerformer.testcases.SanityTestCases.newPreparationwithdataEdit(SanityTestCases.java:115)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2025314346", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2025314346'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=142.0.7444.135)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d4c42dff24e4323815169d7db38687d9, findChildElements {using=tag name, value=td, id=f.605864C31A81A54D0D5514B5DF1D7A9A.d.B01D308784DE5AD60C39252EEF681D16.e.787}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\vinot\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53333}, goog:processID: 28248, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53333/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d4c42dff24e4323815169d7db38687d9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:369)
+	at org.openqa.selenium.remote.RemoteWebElement.findElements(RemoteWebElement.java:203)
+	at com.XIPerformer.pageobject.NewPreparationPage.tableDataEdit(NewPreparationPage.java:360)
+	at com.XIPerformer.testcases.SanityTestCases.newPreparationwithdataEdit(SanityTestCases.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>9</td>
+<td>com.XIPerformer.testcases.SanityTestCases@77f1baf5</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,75 +163,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.execisejourney()'><b>execisejourney</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: Bar, workout, Warm Up, Count, [Ljava.lang.String;@7d94beb9, Purpose: Strengthens lats, traps, and rhomboids., Focus on Form: Keep your back straight; avoid rounding your spine., C:\\Users\\vinot\\Downloads\\OIP.jpeg, https://www.youtube.com/</td>
-<td></td>
-<td>38</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.submitButton()'><b>submitButton</b><br>Test class: com.XIPerformer.testcases.SanityTestCases</td>
-<td></td>
-<td>0</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.downloadExecise()'><b>downloadExecise</b><br>Test class: com.XIPerformer.testcases.SanityTestCases</td>
-<td></td>
-<td>0</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.combinationMaster()'><b>combinationMaster</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: , , Collaborate, Pull Up, , , 10, 11, 00:03:10, 00:02:15, 00:02:20</td>
-<td></td>
-<td>24</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.combinationMaster()'><b>combinationMaster</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: , , Private, Exercise 2, , , 11, 12, 00:03:10, 02:02:20, 03:04:10</td>
-<td></td>
-<td>24</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.execisejourney()'><b>execisejourney</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: Lat Pulldown, Technique, Warm Down, Count, [Ljava.lang.String;@560348e6, Purpose: Strengthens lats, traps, and rhomboids., Focus on Form: Keep your back straight; avoid rounding your spine., C:\\Users\\vinot\\Downloads\\OIP.jpeg, https://www.youtube.com/</td>
-<td></td>
-<td>39</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.combinationMaster()'><b>combinationMaster</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: , , Collaborate, Exercise 1, , , 11, 12, 00:02:20, 00:02:15, 00:02:20</td>
-<td></td>
-<td>23</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.execisejourney()'><b>execisejourney</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: Lat Pushdown, workout, Warm Up, Count, [Ljava.lang.String;@1df8b5b8, Purpose: Strengthens lats, traps, and rhomboids., Focus on Form: Keep your back straight; avoid rounding your spine., C:\\Users\\vinot\\Downloads\\OIP.jpeg, https://www.youtube.com/</td>
-<td></td>
-<td>40</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.combinationMaster()'><b>combinationMaster</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: pull ups special, Warm_UP, Private, , Exercise 4, C:\\Users\\vinot\\Downloads\\OIP.jpeg, 11, 12, 00:04:05, 00:02:10, 01:04:10</td>
-<td></td>
-<td>25</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
 <td title='com.XIPerformer.testcases.SanityTestCases.loginjourney()'><b>loginjourney</b><br>Test class: com.XIPerformer.testcases.SanityTestCases</td>
 <td></td>
 <td>3</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
+<td>com.XIPerformer.testcases.SanityTestCases@77f1baf5</td></tr>
 <tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.execisejourney()'><b>execisejourney</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: T-Bar, workout, Warm Up, Count, [Ljava.lang.String;@23202fce, Purpose: Strengthens lats, traps, and rhomboids., Focus on Form: Keep your back straight; avoid rounding your spine., C:\\Users\\vinot\\Downloads\\OIP.jpeg, https://www.youtube.com/</td>
+<td title='com.XIPerformer.testcases.SanityTestCases.newPreparationwithdata()'><b>newPreparationwithdata</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: 19-11-2025, 22-11-2025, Arasan ,Vadivel, Morning, Custom, Custom, , Exercise 4, 11, 12, 00:04:05, 00:02:10, 01:04:10</td>
 <td></td>
-<td>38</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
+<td>36</td>
+<td>com.XIPerformer.testcases.SanityTestCases@77f1baf5</td></tr>
 <tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.execisejourney()'><b>execisejourney</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: T-Bar Row, Technique, Running, Second, [Ljava.lang.String;@7b993c65, Purpose: Strengthens lats, traps, and rhomboids., Focus on Form: Keep your back straight; avoid rounding your spine., C:\\Users\\vinot\\Downloads\\OIP.jpeg, https://www.youtube.com/</td>
+<td title='com.XIPerformer.testcases.SanityTestCases.newPreparationwithdata()'><b>newPreparationwithdata</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: 10-10-2025, 19-11-2025, Vadivel, Evening, Custom, Custom, Exercise 1, , 11, 12, 00:04:05, 00:02:10, 01:04:10</td>
 <td></td>
-<td>38</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
+<td>33</td>
+<td>com.XIPerformer.testcases.SanityTestCases@77f1baf5</td></tr>
 <tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.combinationmasterClick()'><b>combinationmasterClick</b><br>Test class: com.XIPerformer.testcases.SanityTestCases</td>
+<td title='com.XIPerformer.testcases.SanityTestCases.assignButtonEdit()'><b>assignButtonEdit</b><br>Test class: com.XIPerformer.testcases.SanityTestCases</td>
 <td></td>
-<td>8</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
-<tr>
-<td title='com.XIPerformer.testcases.SanityTestCases.combinationMaster()'><b>combinationMaster</b><br>Test class: com.XIPerformer.testcases.SanityTestCases<br>Parameters: , , Collaborate, , Exercise 5, , 10, 11, 00:03:10, 00:02:20, 01:04:10</td>
-<td></td>
-<td>23</td>
-<td>com.XIPerformer.testcases.SanityTestCases@5c7933ad</td></tr>
+<td>5</td>
+<td>com.XIPerformer.testcases.SanityTestCases@77f1baf5</td></tr>
 </table><p>
 </body>
 </html>

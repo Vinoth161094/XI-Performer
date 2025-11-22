@@ -5,10 +5,9 @@
     <classes>
       <class name="com.XIPerformer.testcases.SanityTestCases">
         <methods>
-          <include name="execisejourney" invocation-numbers="4"/>
+          <include name="newPreparationwithdataEdit" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="downloadExecise"/>
         </methods>
       </class> <!-- com.XIPerformer.testcases.SanityTestCases -->
     </classes>

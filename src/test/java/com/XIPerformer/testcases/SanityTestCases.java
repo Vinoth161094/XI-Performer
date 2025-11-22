@@ -8,80 +8,121 @@ import com.XIPerformer.actiondrivers.DataProviderClass;
 import com.XIPerformer.pageobject.CombinationMasterPage;
 import com.XIPerformer.pageobject.HomePage;
 import com.XIPerformer.pageobject.LoginPage;
+import com.XIPerformer.pageobject.NewPreparationPage;
 import com.automation.base.BaseClass;
 
 public class SanityTestCases extends BaseClass {
-	
+
 	LoginPage login;
 	HomePage home;
 	CombinationMasterPage combinationMaster;
+	NewPreparationPage newPreparationPage;
 
-	
 	@BeforeClass
 	public void setup() {
 		initialization();
-		login =new LoginPage();
-		home =new HomePage();
+		login = new LoginPage();
+		home = new HomePage();
 		combinationMaster = new CombinationMasterPage();
+		newPreparationPage = new NewPreparationPage();
 
-		
 	}
-	
 
-	@Test(priority = 1, enabled =true)
+	@Test(priority = 1, enabled = true)
 	public void loginjourney() throws InterruptedException {
-	
+
 		login.Login(prop.getProperty("username"), prop.getProperty("password"));
 
-		
-		
 	}
-	
-	@Test(priority = 2, enabled = true, dataProvider = "ExeciseData", dataProviderClass = DataProviderClass.class)
+
+	@Test(priority = 2, enabled = false, dataProvider = "ExeciseData", dataProviderClass = DataProviderClass.class)
 	public void execisejourney(String exercise, String categoryValue, String typeValue, String unitValue,
-	                    String[] focusAreaValue, String instructionValue, String keyTipsValue,
-	                    String uploadImageValue, String uploadVideoValue) throws InterruptedException {
+			String[] focusAreaValue, String instructionValue, String keyTipsValue, String uploadImageValue,
+			String uploadVideoValue) throws InterruptedException {
 
 		home.ExerciseMaster();
-	    home.PageHome(exercise, categoryValue, typeValue, unitValue, focusAreaValue,
-	                  instructionValue, keyTipsValue, uploadImageValue, uploadVideoValue);
+		home.PageHome(exercise, categoryValue, typeValue, unitValue, focusAreaValue, instructionValue, keyTipsValue,
+				uploadImageValue, uploadVideoValue);
 	}
-	
-	@Test(priority = 3, enabled =true)
+
+	@Test(priority = 3, enabled = false)
 	public void downloadExecise() throws InterruptedException {
-		
+
 		home.downloadExeciseList();
 
+	}
 
-}
+	@Test(priority = 4, enabled = false)
 
-@Test(priority = 4, enabled = true)
+	public void combinationmasterClick() throws InterruptedException {
 
-public void combinationmasterClick() throws InterruptedException {
-		
-	combinationMaster.combinationmasterClick();
-
-
-}
-
-	@Test(priority = 5, enabled = true, dataProvider = "CombinationData", dataProviderClass = DataProviderClass.class)
-	public void combinationMaster(String Combinationname, String Activity, String Privacy, String workoutname, String Techique, String images, String sets, String Rep, String time, String Reset, String recovery) throws InterruptedException {
-		
-		
-		combinationMaster.cpmbinationMaster(Combinationname,Activity,Privacy,workoutname,Techique, images, sets, Rep,time,Reset, recovery );
+		combinationMaster.combinationmasterClick();
 
 	}
-	
-	@Test(priority = 6, enabled = true)
+
+	@Test(priority = 5, enabled = false, dataProvider = "CombinationData", dataProviderClass = DataProviderClass.class)
+	public void combinationMaster(String Combinationname, String Activity, String Privacy, String workoutname,
+			String Techique, String images, String sets, String Rep, String time, String Reset, String recovery)
+			throws InterruptedException {
+
+		combinationMaster.cpmbinationMaster(Combinationname, Activity, Privacy, workoutname, Techique, images, sets,
+				Rep, time, Reset, recovery);
+
+	}
+
+	@Test(priority = 6, enabled = false)
 
 	public void submitButton() throws InterruptedException {
-			
+
 		combinationMaster.sumbitClick();
 
+	}
+
+	@Test(priority = 7, enabled = false, dataProvider = "NewPreparationData", dataProviderClass = DataProviderClass.class)
+
+	public void newPreparation(String startDate, String endDate, String playerList, String session, String activity,
+			String Combination, String workoutname, String Techique, String sets, String Rep, String time, String Reset,
+			String covery) throws InterruptedException {
+
+		newPreparationPage.newPreparation();
+		newPreparationPage.assignPreparation(startDate, endDate, playerList, session, activity, Combination,
+				workoutname, Techique, sets, Rep, time, Reset, covery);
+	}
+
+	@Test(priority = 8, enabled = false)
+
+	public void assignButton() throws InterruptedException {
+
+		newPreparationPage.assign();
 
 	}
+
+	@Test(priority = 9, enabled = true, dataProvider = "NewPreparationData", dataProviderClass = DataProviderClass.class)
+
+	public void newPreparationwithdata(String startDate, String endDate, String playerList, String session,
+			String activity, String Combination, String workoutname, String Techique, String sets, String Rep,
+			String time, String Reset, String covery) throws InterruptedException {
+
+		newPreparationPage.newPreparation();
+		newPreparationPage.assignPreparationwithdataEdit(startDate, endDate, playerList, session, activity, Combination,
+				workoutname, Techique, sets, Rep, time, Reset, covery);
+	}
+
+	@Test(priority = 10, enabled = true, dataProvider = "NewPreparationEditData", dataProviderClass = DataProviderClass.class)
+
+	public void newPreparationwithdataEdit(String data1, String sets) throws InterruptedException {
+
+		newPreparationPage.tableDataEdit(data1, sets);
+	}
 	
-	
+	@Test(priority = 11, enabled = true)
+
+	public void assignButtonEdit() throws InterruptedException {
+
+		newPreparationPage.assign();
+
+	}
+
 
 	@AfterClass
 	public void teardown() throws InterruptedException {

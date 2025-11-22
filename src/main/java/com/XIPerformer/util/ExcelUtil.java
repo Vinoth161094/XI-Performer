@@ -162,5 +162,80 @@ public class ExcelUtil {
 	            return "";
 	    }
 	}
+	
+	public static Object[][] getExcelDate(String filePath, String sheetName) throws IOException {
+
+	    FileInputStream fis = new FileInputStream(filePath);
+	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    Sheet sheet = workbook.getSheet(sheetName);
+
+	    int rowCount = sheet.getPhysicalNumberOfRows();
+	    int colCount = sheet.getRow(0).getPhysicalNumberOfCells();  
+	    
+	    System.out.println("Column Count = " + colCount);
+
+	    System.out.println("Row Count = " + rowCount);
+
+	    Object[][] data = new Object[rowCount - 1][colCount];
+
+	    for (int i = 1; i < rowCount; i++) {
+	        Row row = sheet.getRow(i);
+
+	        for (int j = 0; j < colCount; j++) {
+	            Cell cell = (row == null) ? null : row.getCell(j, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+	            Object cellValue = getCellValueDate(cell);
+	            data[i - 1][j] = cellValue;
+	        }
+	    }
+
+	    workbook.close();
+	    fis.close();
+	    return data;
+	}
+
+
+
+
+
+	
+	
+	private static Object getCellValueDate(Cell cell) {
+
+	    if (cell == null) return "";
+
+	    switch (cell.getCellType()) {
+
+	        case STRING:
+	            return cell.getStringCellValue().trim();
+
+	        case NUMERIC:
+	            if (DateUtil.isCellDateFormatted(cell)) {
+
+	                String excelFormat = cell.getCellStyle().getDataFormatString();
+
+	                if (excelFormat.contains("h") || excelFormat.contains("H")) {
+	                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+	                    return timeFormat.format(cell.getDateCellValue());
+	                }
+
+	                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+	                return dateFormat.format(cell.getDateCellValue());
+	            }
+
+	            double num = cell.getNumericCellValue();
+	            return (num == (long) num) ? String.valueOf((long) num) : String.valueOf(num);
+
+	        case BOOLEAN:
+	            return String.valueOf(cell.getBooleanCellValue());
+
+	        case FORMULA:
+	            return cell.toString();
+
+	        default:
+	            return "";
+	    }
+	}
+
+
 
 }

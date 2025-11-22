@@ -20,6 +20,13 @@
         </build>
   
   <dependencies>
+	  
+	  <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.13.0</version>
+</dependency>
+
 	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
@@ -43,11 +50,6 @@
 </dependency>
 
 
-<dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi</artifactId>
-        <version>5.3.0</version>
-    </dependency>
     
     
   	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -75,12 +77,6 @@
     <scope>test</scope>
 </dependency>
 
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>5.3.0</version>
-    <scope>test</scope>
-</dependency>
 
 <dependency>
     <groupId>org.json</groupId>
@@ -96,6 +92,8 @@
 </dependency>
 
 
+
+
 <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 <dependency>
     <groupId>com.googlecode.json-simple</groupId>
@@ -104,15 +102,5 @@
 </dependency>
 
 
-  	<dependency>
-  		<groupId>org.sele</groupId>
-  		<artifactId>Program</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>Graspear</groupId>
-  		<artifactId>Graspears</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   </dependencies>
 </project>

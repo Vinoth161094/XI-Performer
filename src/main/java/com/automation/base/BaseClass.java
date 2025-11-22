@@ -63,6 +63,12 @@ public class BaseClass {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    
+    
+    public void waitForElementtobeClikable(By option) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(option));
+    }
 
     public void jsClick(WebElement element) {
         try {
@@ -90,7 +96,7 @@ public void clearField(WebElement element) {
     System.out.println(text);
 
     for (int i = 0; i < text.length(); i++) {
-        element.sendKeys(Keys.BACK_SPACE);
+     //   element.sendKeys(Keys.BACK_SPACE);
     }
 }
 

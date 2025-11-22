@@ -17,6 +17,18 @@ public class DataProviderClass {
 	        String filePath = System.getProperty("user.dir") + "\\Test Data\\CombinationMasterTD.xlsx";
 	        return ExcelUtil.getExcelData1(filePath, "Sheet2");
 	    }
+	 
+	 @DataProvider(name = "NewPreparationData")
+	    public Object[][] getNewPreparationData() throws Exception {
+	        String filePath = System.getProperty("user.dir") + "\\Test Data\\CombinationMasterTD.xlsx";
+	        return ExcelUtil.getExcelDate(filePath, "Sheet4");
+	    }
+	 
+	 @DataProvider(name = "NewPreparationEditData")
+	    public Object[][] getNewPreparationEditData() throws Exception {
+	        String filePath = System.getProperty("user.dir") + "\\Test Data\\CombinationMasterTD.xlsx";
+	        return ExcelUtil.getExcelDate(filePath, "Sheet5");
+	    }
 	}
 
 
