@@ -2,7 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="XIPerformerTest" parallel="methods" thread-count="1">
 	
+	<listeners>
+    <listener class-name="ExtentReportListener" />
+</listeners>
+
+  
+  
   <test name="XIPerformerTest">
+	  
+	  
     <classes>
       <class name="com.XIPerformer.testcases.SanityTestCases"/>
     </classes>

@@ -78,7 +78,7 @@ public class HomePage extends BaseClass {
 
 	public void ExerciseMaster() throws InterruptedException {
 
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 
 		exercise.click();
 
@@ -88,7 +88,7 @@ public class HomePage extends BaseClass {
 			String[] focusAreaValue, String instructionValue, String keyTipsValue, String uploadImageValue,
 			String uploadVideoValue) throws InterruptedException {
 
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 		addButton.click();
 		exercisename.sendKeys(exerciseName);
@@ -130,10 +130,10 @@ public class HomePage extends BaseClass {
 			System.out.println("Exercise not created — it may already exist!");
 		}
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		okButton.click();
-		Thread.sleep(3000);
+		
 
 	}
 

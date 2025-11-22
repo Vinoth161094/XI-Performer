@@ -5,9 +5,14 @@
     <classes>
       <class name="com.XIPerformer.testcases.SanityTestCases">
         <methods>
-          <include name="newPreparationwithdataEdit" invocation-numbers="0"/>
+          <include name="execisejourney" invocation-numbers="0 1 2 3 4"/>
+          <include name="ExerciseMaster"/>
           <include name="teardown"/>
           <include name="setup"/>
+          <include name="combinationMaster" invocation-numbers="0 1 2 3 4"/>
+          <include name="downloadExecise"/>
+          <include name="submitButton"/>
+          <include name="combinationmasterClick"/>
         </methods>
       </class> <!-- com.XIPerformer.testcases.SanityTestCases -->
     </classes>

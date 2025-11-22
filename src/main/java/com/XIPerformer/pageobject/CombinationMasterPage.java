@@ -81,20 +81,27 @@ public class CombinationMasterPage extends BaseClass {
 
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement sumbitButton;
+	
+	@FindBy(xpath = "//button[contains(text(),'OK')]")
+	WebElement okButton;
 
 	public void combinationmasterClick() throws InterruptedException {
 
-		Thread.sleep(8000);
+		Thread.sleep(15000);
 
 		combinationMaster.click();
-
+		
 		newButton.click();
+
+
 
 	}
 
 	public void cpmbinationMaster(String Combinationname, String Activity, String Privacy, String workoutname,
 			String Techique, String images, String sets, String Rep, String time, String Reset, String covery)
 			throws InterruptedException {
+		
+
 
 		Thread.sleep(5000);
 
@@ -132,13 +139,18 @@ public class CombinationMasterPage extends BaseClass {
 
 		}
 
+		Thread.sleep(1000);
+
+
 		set.click();
-//		 set.sendKeys(Keys.CONTROL + "a");
-//		 set.sendKeys(Keys.DELETE);
+		set.sendKeys(Keys.CONTROL + "a");
+		set.sendKeys(Keys.DELETE);
 
 		set.sendKeys(sets);
 
-		reps.clear();
+		reps.click();
+		reps.sendKeys(Keys.CONTROL + "a");
+		reps.sendKeys(Keys.DELETE);
 
 		reps.sendKeys(Rep);
 
@@ -183,9 +195,17 @@ public class CombinationMasterPage extends BaseClass {
 
 	}
 
-	public void sumbitClick() {
+	public void sumbitClick() throws InterruptedException {
+
+		Thread.sleep(3000);
 
 		sumbitButton.click();
+		
+		Thread.sleep(3000);
+
+		
+		okButton.click();
+
 
 	}
 

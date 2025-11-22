@@ -97,7 +97,7 @@ public class NewPreparationPage extends BaseClass {
 
 	public void newPreparation() throws InterruptedException {
 
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 
 		newPreparation.click();
 	}
@@ -289,20 +289,8 @@ public class NewPreparationPage extends BaseClass {
 			}
 		}
 		
-		Thread.sleep(1000);
 
 
-		set.click();
-		set.sendKeys(Keys.CONTROL + "a");
-		set.sendKeys(Keys.DELETE);
-
-		set.sendKeys(sets);
-
-		reps.click();
-		reps.sendKeys(Keys.CONTROL + "a");
-		reps.sendKeys(Keys.DELETE);
-
-		reps.sendKeys(Rep);
 
 		times.click();
 
