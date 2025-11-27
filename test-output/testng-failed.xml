@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="methods" name="Failed suite [XIPerformerTest]" guice-stage="DEVELOPMENT">
-  <test thread-count="1" parallel="methods" name="XIPerformerTest(failed)">
+<suite thread-count="1" name="Failed suite [XIPerformerTest]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.XIPerformer.util.ExtentITestListener"/>
+  </listeners>
+  <test thread-count="1" name="XIPerformerTest(failed)">
     <classes>
-      <class name="com.XIPerformer.testcases.SanityTestCases">
+      <class name="com.XIPerformer.testcases.SanityManagerLogin">
         <methods>
-          <include name="execisejourney" invocation-numbers="0 1 2 3 4"/>
-          <include name="ExerciseMaster"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="combinationMaster" invocation-numbers="0 1 2 3 4"/>
-          <include name="downloadExecise"/>
-          <include name="submitButton"/>
-          <include name="combinationmasterClick"/>
+          <include name="userRegisterDetailsForCoach" invocation-numbers="1 2 3"/>
         </methods>
-      </class> <!-- com.XIPerformer.testcases.SanityTestCases -->
+      </class> <!-- com.XIPerformer.testcases.SanityManagerLogin -->
     </classes>
   </test> <!-- XIPerformerTest(failed) -->
 </suite> <!-- Failed suite [XIPerformerTest] -->

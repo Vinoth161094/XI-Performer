@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.CellValue;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
@@ -234,6 +235,124 @@ public class ExcelUtil {
 	        default:
 	            return "";
 	    }
+	}
+
+	public static Object[][] getExcelDateuser(String filePath, String sheetName) throws IOException {
+
+	    FileInputStream fis = new FileInputStream(filePath);
+	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    Sheet sheet = workbook.getSheet(sheetName);
+
+	    int actualRowCount = 0;
+	    for (int i = 0; i <= sheet.getLastRowNum(); i++) {
+	        Row row = sheet.getRow(i);
+	        if (!isRowEmpty(row)) {
+	            actualRowCount++;
+	        }
+	    }
+
+	    int colCount = sheet.getRow(0).getPhysicalNumberOfCells();
+
+	    System.out.println("Column Count = " + colCount);
+	    System.out.println("Row Count = " + actualRowCount);
+
+	    Object[][] data = new Object[actualRowCount - 1][colCount];
+
+	    int index = 0;
+
+	    for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+	        Row row = sheet.getRow(i);
+
+	        if (isRowEmpty(row)) continue;
+
+	        for (int j = 0; j < colCount; j++) {
+	            Cell cell = row.getCell(j, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+	            data[index][j] = getCellValueDateUser(cell);
+	        }
+	        index++;
+	    }
+
+	    workbook.close();
+	    fis.close();
+	    return data;
+	}
+
+
+
+	private static boolean isRowEmpty(Row row) {
+
+	    if (row == null) return true;
+
+	    for (int c = row.getFirstCellNum(); c < row.getLastCellNum(); c++) {
+	        Cell cell = row.getCell(c, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
+
+	        if (cell != null && cell.getCellType() != CellType.BLANK) {
+	            if (!cell.toString().trim().isEmpty()) {
+	                return false; 
+	            }
+	        }
+	    }
+	    return true; 
+	}
+
+
+	
+	private static Object getCellValueDateUser(Cell cell) {
+
+	    if (cell == null) return "";
+
+	    switch (cell.getCellType()) {
+
+	        case STRING:
+	            return cell.getStringCellValue().trim();
+
+	        case NUMERIC:
+	            if (DateUtil.isCellDateFormatted(cell)) {
+
+	                String excelFormat = cell.getCellStyle().getDataFormatString();
+
+	                if (excelFormat.contains("h") || excelFormat.contains("H")) {
+	                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+	                    return timeFormat.format(cell.getDateCellValue());
+	                }
+
+	                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+	                return dateFormat.format(cell.getDateCellValue());
+	            }
+
+	            double num = cell.getNumericCellValue();
+	            return (num == (long) num) ? String.valueOf((long) num) : String.valueOf(num);
+
+	        case BOOLEAN:
+	            return String.valueOf(cell.getBooleanCellValue());
+
+	        case FORMULA:
+	            return cell.toString();
+
+	        default:
+	            return "";
+	    }
+	}
+	
+	public static String[] getExcelHeaders(String filePath, String sheetName) throws IOException {
+
+	    FileInputStream fis = new FileInputStream(filePath);
+	    XSSFWorkbook workbook = new XSSFWorkbook(fis);
+	    Sheet sheet = workbook.getSheet(sheetName);
+
+	    Row headerRow = sheet.getRow(0);
+	    int colCount = headerRow.getPhysicalNumberOfCells();
+
+	    String[] headers = new String[colCount];
+
+	    for (int i = 0; i < colCount; i++) {
+	        headers[i] = headerRow.getCell(i).getStringCellValue().trim();
+	    }
+
+	    workbook.close();
+	    fis.close();
+
+	    return headers;
 	}
 
 

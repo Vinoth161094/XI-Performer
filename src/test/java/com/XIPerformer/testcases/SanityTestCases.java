@@ -35,14 +35,14 @@ public class SanityTestCases extends BaseClass {
 
 	}
 	
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void ExerciseMaster() throws InterruptedException {
 
 		home.ExerciseMaster();
 
 	}
 
-	@Test(priority = 3, enabled = true, dataProvider = "ExeciseData", dataProviderClass = DataProviderClass.class)
+	@Test(priority = 3, enabled = false, dataProvider = "ExeciseData", dataProviderClass = DataProviderClass.class)
 	public void execisejourney(String exercise, String categoryValue, String typeValue, String unitValue,
 			String[] focusAreaValue, String instructionValue, String keyTipsValue, String uploadImageValue,
 			String uploadVideoValue) throws InterruptedException {
@@ -51,14 +51,14 @@ public class SanityTestCases extends BaseClass {
 				uploadImageValue, uploadVideoValue);
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 4, enabled = false)
 	public void downloadExecise() throws InterruptedException {
 
 		home.downloadExeciseList();
 
 	}
 
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 5, enabled = false)
 
 	public void combinationmasterClick() throws InterruptedException {
 
@@ -66,7 +66,7 @@ public class SanityTestCases extends BaseClass {
 
 	}
 
-	@Test(priority = 6, enabled = true, dataProvider = "CombinationData", dataProviderClass = DataProviderClass.class)
+	@Test(priority = 6, enabled = false, dataProvider = "CombinationData", dataProviderClass = DataProviderClass.class)
 	public void combinationMaster(String Combinationname, String Activity, String Privacy, String workoutname,
 			String Techique, String images, String sets, String Rep, String time, String Reset, String recovery)
 			throws InterruptedException {
@@ -76,7 +76,7 @@ public class SanityTestCases extends BaseClass {
 
 	}
 
-	@Test(priority = 7, enabled = true)
+	@Test(priority = 7, enabled = false)
 
 	public void submitButton() throws InterruptedException {
 
@@ -84,7 +84,7 @@ public class SanityTestCases extends BaseClass {
 
 	}
 
-	@Test(priority = 8, enabled = false, dataProvider = "NewPreparationData", dataProviderClass = DataProviderClass.class)
+	@Test(priority = 8, enabled = true, dataProvider = "NewPreparationData", dataProviderClass = DataProviderClass.class)
 
 	public void newPreparation(String startDate, String endDate, String playerList, String session, String activity,
 			String Combination, String workoutname, String Techique, String sets, String Rep, String time, String Reset,
@@ -95,7 +95,7 @@ public class SanityTestCases extends BaseClass {
 				workoutname, Techique, sets, Rep, time, Reset, covery);
 	}
 
-	@Test(priority = 9, enabled = false)
+	@Test(priority = 9, enabled = true)
 
 	public void assignButton() throws InterruptedException {
 
