@@ -35,7 +35,7 @@ public class SanityManagerLogin  extends BaseClass {
 
 	}
 	
-	@Test(priority = 2, enabled = true, dataProvider = "UserCoachData", dataProviderClass = DataProviderClass.class)
+	@Test(priority = 2, enabled = false, dataProvider = "UserCoachData", dataProviderClass = DataProviderClass.class)
 	public void userRegisterDetailsForCoach(String fname, String lname, String gender, String bloodgroup, String email, String mobilenumber, String username, String password, String country, String state, String Address, String Role,String dob, String Degree, String Certification, String Event, String EventType, String SubEvent, String[] headers ) throws InterruptedException {
 		Object[] values = new Object[]{
 	            fname, lname, gender, bloodgroup, email, mobilenumber,

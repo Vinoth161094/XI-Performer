@@ -7,9 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.XIPerformer.util.Commonmethods;
 import com.automation.base.BaseClass;
 
 public class CombinationMasterPage extends BaseClass {
+	
+	Commonmethods c = new Commonmethods();
 
 	public CombinationMasterPage() {
 
@@ -113,23 +116,23 @@ public class CombinationMasterPage extends BaseClass {
 		if (Activity != null && !Activity.trim().isEmpty()) {
 
 			activity.click();
-			dropdownClick(activityListValue, Activity);
+			c.dropdownClick(activityListValue, Activity);
 
 		}
 
 		privacy.click();
-		dropdownClick(privacyListValue, Privacy);
+		c.dropdownClick(privacyListValue, Privacy);
 
 		if (workoutname != null && !workoutname.trim().isEmpty()) {
 
 			workoutName.click();
-			dropdownClick(workoutNameListValue, workoutname);
+			c.dropdownClick(workoutNameListValue, workoutname);
 
 		} else {
 
 			if (Techique != null && !Techique.trim().isEmpty()) {
 				Techinque.click();
-				dropdownClick(TechinqueListValue, Techique);
+				c.dropdownClick(TechinqueListValue, Techique);
 			}
 		}
 
@@ -158,11 +161,11 @@ public class CombinationMasterPage extends BaseClass {
 
 		String[] split = time.split(":");
 
-		dropdownClick(hoursListValue, split[0]);
+		c.dropdownClick(hoursListValue, split[0]);
 
-		dropdownClick(minutesListValue, split[1]);
+		c.dropdownClick(minutesListValue, split[1]);
 
-		dropdownClick(secondsListValue, split[2]);
+		c.dropdownClick(secondsListValue, split[2]);
 
 		reset.click();
 
@@ -170,13 +173,13 @@ public class CombinationMasterPage extends BaseClass {
 
 		String[] resetspllit = Reset.split(":");
 
-		dropdownClick(hoursListValue, resetspllit[0]);
+		c.dropdownClick(hoursListValue, resetspllit[0]);
 
 		Thread.sleep(2000);
 
-		dropdownClick(minutesListValue, resetspllit[1]);
+		c.dropdownClick(minutesListValue, resetspllit[1]);
 
-		dropdownClick(secondsListValue, resetspllit[2]);
+		c.dropdownClick(secondsListValue, resetspllit[2]);
 
 		recovery.click();
 
@@ -184,12 +187,12 @@ public class CombinationMasterPage extends BaseClass {
 
 		Thread.sleep(3000);
 
-		dropdownClick(hoursListValue, coverysplit[0]);
+		c.dropdownClick(hoursListValue, coverysplit[0]);
 		Thread.sleep(3000);
 
-		dropdownClick(minutesListValue, coverysplit[1]);
+		c.dropdownClick(minutesListValue, coverysplit[1]);
 
-		dropdownClick(secondsListValue, coverysplit[2]);
+		c.dropdownClick(secondsListValue, coverysplit[2]);
 
 		addButton.click();
 

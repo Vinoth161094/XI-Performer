@@ -11,7 +11,7 @@
 	  
 	  
     <classes>
-      <class name="com.XIPerformer.testcases.SanityManagerLogin"/>
+      <class name="com.XIPerformer.testcases.SanityManagerLoginUserReg"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

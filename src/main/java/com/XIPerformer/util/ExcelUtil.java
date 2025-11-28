@@ -2,7 +2,12 @@ package com.XIPerformer.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -11,6 +16,7 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
@@ -355,6 +361,82 @@ public class ExcelUtil {
 	    return headers;
 	}
 
+	public static Object[][] getData(String filePath, String sheetName) throws Exception {
 
+        FileInputStream fis = new FileInputStream(filePath);
+        XSSFWorkbook workbook = new XSSFWorkbook(fis);
+        XSSFSheet sheet = workbook.getSheet(sheetName);
 
+        Row headerRow = sheet.getRow(0);
+        Map<String, Integer> headerIndex = new LinkedHashMap<>();
+
+        for (int i = 0; i < headerRow.getLastCellNum(); i++) {
+            Cell cell = headerRow.getCell(i, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+            headerIndex.put(cell.toString().trim(), i);
+        }
+
+        List<Map<String, String>> list = new ArrayList<>();
+
+        for (int r = 1; r <= sheet.getLastRowNum(); r++) {
+            Row row = sheet.getRow(r);
+            if (row == null) continue;
+
+            Map<String, String> rowMap = new LinkedHashMap<>();
+
+            for (String header : headerIndex.keySet()) {
+                int colIndex = headerIndex.get(header);
+                Cell cell = row.getCell(colIndex, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+
+                String value = "";
+
+                switch (cell.getCellType()) {
+
+                    case STRING:
+                        value = cell.getStringCellValue().trim();
+                        break;
+
+                    case NUMERIC:
+                        value = new BigDecimal(cell.getNumericCellValue())
+                                .toPlainString()
+                                .trim();
+                        break;
+
+                    case BOOLEAN:
+                        value = String.valueOf(cell.getBooleanCellValue()).trim();
+                        break;
+
+                    case FORMULA:
+                        try {
+                            value = new BigDecimal(cell.getNumericCellValue())
+                                    .toPlainString();
+                        } catch (Exception e) {
+                            value = cell.getStringCellValue();
+                        }
+                        value = value.trim();
+                        break;
+
+                    case BLANK:
+                    default:
+                        value = "";
+                }
+
+                rowMap.put(header, value);
+            }
+
+            list.add(rowMap);
+        }
+
+        workbook.close();
+        fis.close();
+
+        Object[][] finalData = new Object[list.size()][1];
+
+        for (int i = 0; i < list.size(); i++) {
+            finalData[i][0] = list.get(i);
+        }
+
+        return finalData;
+    }
 }
+
+

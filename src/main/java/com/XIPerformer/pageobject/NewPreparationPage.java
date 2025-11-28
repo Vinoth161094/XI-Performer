@@ -11,9 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.XIPerformer.util.Commonmethods;
 import com.automation.base.BaseClass;
 
 public class NewPreparationPage extends BaseClass {
+	
+	Commonmethods c = new Commonmethods();
+
 
 	public NewPreparationPage() {
 
@@ -139,26 +143,26 @@ public class NewPreparationPage extends BaseClass {
 
 		session.click();
 
-		dropdownClick(ListValue, Session);
+		c.dropdownClick(ListValue, Session);
 
 		activity.click();
 
-		dropdownClick(ListValue, Activity);
+		c.dropdownClick(ListValue, Activity);
 
 		combination.click();
 
-		dropdownClick(ListValue, Combination);
+		c.dropdownClick(ListValue, Combination);
 
 		if (workoutname != null && !workoutname.trim().isEmpty()) {
 
 			workoutName.click();
-			dropdownClick(workoutNameListValue, workoutname);
+			c.dropdownClick(workoutNameListValue, workoutname);
 
 		} else {
 
 			if (Techique != null && !Techique.trim().isEmpty()) {
 				Techinque.click();
-				dropdownClick(TechinqueListValue, Techique);
+				c.dropdownClick(TechinqueListValue, Techique);
 			}
 		}
 
@@ -178,11 +182,11 @@ public class NewPreparationPage extends BaseClass {
 
 		String[] split = time.split(":");
 
-		dropdownClick(hoursListValue, split[0]);
+		c.dropdownClick(hoursListValue, split[0]);
 
-		dropdownClick(minutesListValue, split[1]);
+		c.dropdownClick(minutesListValue, split[1]);
 
-		dropdownClick(secondsListValue, split[2]);
+		c.dropdownClick(secondsListValue, split[2]);
 
 		reset.click();
 
@@ -190,13 +194,13 @@ public class NewPreparationPage extends BaseClass {
 
 		String[] resetspllit = Reset.split(":");
 
-		dropdownClick(hoursListValue, resetspllit[0]);
+		c.dropdownClick(hoursListValue, resetspllit[0]);
 
 		Thread.sleep(2000);
 
-		dropdownClick(minutesListValue, resetspllit[1]);
+		c.dropdownClick(minutesListValue, resetspllit[1]);
 
-		dropdownClick(secondsListValue, resetspllit[2]);
+		c.dropdownClick(secondsListValue, resetspllit[2]);
 
 		recovery.click();
 
@@ -204,11 +208,11 @@ public class NewPreparationPage extends BaseClass {
 
 		Thread.sleep(3000);
 
-		dropdownClick(hoursListValue, coverysplit[0]);
+		c.dropdownClick(hoursListValue, coverysplit[0]);
 
-		dropdownClick(minutesListValue, coverysplit[1]);
+		c.dropdownClick(minutesListValue, coverysplit[1]);
 
-		dropdownClick(secondsListValue, coverysplit[2]);
+		c.dropdownClick(secondsListValue, coverysplit[2]);
 
 		addButton.click();
 
@@ -266,26 +270,26 @@ public class NewPreparationPage extends BaseClass {
 
 		session.click();
 
-		dropdownClick(ListValue, Session);
+		c.dropdownClick(ListValue, Session);
 
 		activity.click();
 
-		dropdownClick(ListValue, Activity);
+		c.dropdownClick(ListValue, Activity);
 
 		combination.click();
 
-		dropdownClick(ListValue, Combination);
+		c.dropdownClick(ListValue, Combination);
 
 		if (workoutname != null && !workoutname.trim().isEmpty()) {
 
 			workoutName.click();
-			dropdownClick(workoutNameListValue, workoutname);
+			c.dropdownClick(workoutNameListValue, workoutname);
 
 		} else {
 
 			if (Techique != null && !Techique.trim().isEmpty()) {
 				Techinque.click();
-				dropdownClick(TechinqueListValue, Techique);
+				c.dropdownClick(TechinqueListValue, Techique);
 			}
 		}
 		
@@ -296,11 +300,11 @@ public class NewPreparationPage extends BaseClass {
 
 		String[] split = time.split(":");
 
-		dropdownClick(hoursListValue, split[0]);
+		c.dropdownClick(hoursListValue, split[0]);
 
-		dropdownClick(minutesListValue, split[1]);
+		c.dropdownClick(minutesListValue, split[1]);
 
-		dropdownClick(secondsListValue, split[2]);
+		c.dropdownClick(secondsListValue, split[2]);
 
 		reset.click();
 
@@ -308,13 +312,13 @@ public class NewPreparationPage extends BaseClass {
 
 		String[] resetspllit = Reset.split(":");
 
-		dropdownClick(hoursListValue, resetspllit[0]);
+		c.dropdownClick(hoursListValue, resetspllit[0]);
 
 		Thread.sleep(2000);
 
-		dropdownClick(minutesListValue, resetspllit[1]);
+		c.dropdownClick(minutesListValue, resetspllit[1]);
 
-		dropdownClick(secondsListValue, resetspllit[2]);
+		c.dropdownClick(secondsListValue, resetspllit[2]);
 
 		recovery.click();
 
@@ -322,11 +326,11 @@ public class NewPreparationPage extends BaseClass {
 
 		Thread.sleep(3000);
 
-		dropdownClick(hoursListValue, coverysplit[0]);
+		c.dropdownClick(hoursListValue, coverysplit[0]);
 
-		dropdownClick(minutesListValue, coverysplit[1]);
+		c.dropdownClick(minutesListValue, coverysplit[1]);
 
-		dropdownClick(secondsListValue, coverysplit[2]);
+		c.dropdownClick(secondsListValue, coverysplit[2]);
 
 		addButton.click();
 

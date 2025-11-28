@@ -5,9 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.XIPerformer.util.Commonmethods;
 import com.automation.base.BaseClass;
 
 public class HomePage extends BaseClass {
+	
+	Commonmethods c = new Commonmethods();
+
 
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -94,19 +98,19 @@ public class HomePage extends BaseClass {
 		exercisename.sendKeys(exerciseName);
 
 		category.click();
-		dropdownClick(categorylist, categoryValue);
+		c.dropdownClick(categorylist, categoryValue);
 
 		type.click();
-		dropdownClick(typeListValue, typeValue);
+		c.dropdownClick(typeListValue, typeValue);
 
 		unit.click();
-		dropdownClick(unitListValue, unitValue);
+		c.dropdownClick(unitListValue, unitValue);
 
 		Thread.sleep(3000);
 
 		for (int i = 1; i < focusAreaValue.length; i++) {
 			focusArea.click();
-			dropdownClick(focusAreaListValue, focusAreaValue[i]);
+			c.dropdownClick(focusAreaListValue, focusAreaValue[i]);
 			addFocus.click();
 			Thread.sleep(500);
 		}

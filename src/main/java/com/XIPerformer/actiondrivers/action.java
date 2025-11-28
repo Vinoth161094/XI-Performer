@@ -30,14 +30,6 @@ public class action  extends BaseClass {
 		
 	}
 	
-	public void setImplicitWait() {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    public void waitForVisibility(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(element));
-    }
 
     public void jsClick(WebElement element) {
         try {
@@ -60,12 +52,7 @@ public class action  extends BaseClass {
 		
 
 }
-	public void Login() {
 	
-	
-	}
-	
-
 }
 
 

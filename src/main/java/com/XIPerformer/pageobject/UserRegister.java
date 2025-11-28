@@ -14,7 +14,7 @@ import com.automation.base.BaseClass;
 
 public class UserRegister extends BaseClass {
 	
-	Commonmethods Common = new Commonmethods(); ;
+	Commonmethods c = new Commonmethods(); ;
 
 	public UserRegister() {
 		PageFactory.initElements(driver, this);
@@ -157,11 +157,11 @@ public void userCoachDetails(String fname, String lname, String Gender, String B
 	
 	gender.click();
 	
-	dropdownClick(listValue, Gender);
+	c.dropdownClick(listValue, Gender);
 	
 	bloodGroup.click();
 	
-	dropdownClick(listValue, BloodGroup);
+	c.dropdownClick(listValue, BloodGroup);
 	
 	email.sendKeys(Keys.CONTROL + "a");
 	email.sendKeys(Keys.DELETE);
@@ -182,10 +182,10 @@ public void userCoachDetails(String fname, String lname, String Gender, String B
 	pword.sendKeys(password);
 	
 	country.click();
-	dropdownClick(listValue, Country);
+	c.dropdownClick(listValue, Country);
 	
 	state.click();;
-	dropdownClick(listValue, State);
+	c.dropdownClick(listValue, State);
 	
 	address.sendKeys(Keys.CONTROL + "a");
 	address.sendKeys(Keys.DELETE);
@@ -193,16 +193,16 @@ public void userCoachDetails(String fname, String lname, String Gender, String B
 	address.sendKeys(Address);
 	
 	role.click();
-	dropdownClick(listValue, Role);
+	c.dropdownClick(listValue, Role);
 	
 	Dob.sendKeys(dob);
 	
 	degree.click();
-	dropdownClick(listValue, Degree);
+	c.dropdownClick(listValue, Degree);
 	
 	
 	certification.click();
-	dropdownClick(listValue, Certification);
+	c.dropdownClick(listValue, Certification);
 	
 	String[] events      = Event.split(",");
 	String[] eventTypes  = EventType.split(",");
@@ -214,17 +214,17 @@ public void userCoachDetails(String fname, String lname, String Gender, String B
 
 	    event.click();
 	    if (i < events.length) {
-	        dropdownClick(listValue, events[i].trim());
+	    	c.dropdownClick(listValue, events[i].trim());
 	    }
 
 	    eventtype.click();
 	    if (i < eventTypes.length) {
-	        dropdownClick(listValue, eventTypes[i].trim());
+	    	c.dropdownClick(listValue, eventTypes[i].trim());
 	    }
 
 	    subevent.click();
 	    if (i < subEvents.length) {
-	        dropdownClick(listValue, subEvents[i].trim());
+	    	c.dropdownClick(listValue, subEvents[i].trim());
 	    }
 
 	    eventAddButton.click();
@@ -233,25 +233,6 @@ public void userCoachDetails(String fname, String lname, String Gender, String B
 	}
 
 
-
-//	event.click();
-//	String[] split = Event.split(",");
-//	for (int i = 0; i < split.length; i++) {
-//		dropdownClick(listValue, split[i]);
-//	
-//	}
-//	
-//	eventtype.click();
-//	dropdownClick(listValue, EventType);
-//	
-//	subevent.click();
-//	dropdownClick(listValue, SubEvent);
-//	
-//	Thread.sleep(2000);
-//
-//
-//	eventAddButton.click();
-//	
 	try {
 	    if (eventmailexits.isDisplayed() && eventmailexits.getText().equals("Email Already Exists")) {
 	        System.out.println("Email Already Exists");
@@ -277,7 +258,7 @@ public void userCoachDetails(String fname, String lname, String Gender, String B
 		System.out.println("Coach not created — it may already exist or Duplicate Value!");
 		okButton.click();
 		Thread.sleep(2000);
-		Common.scrollToTop();
+		c.scrollToTop();
 		Thread.sleep(5000);
 		backButton.click();
 
@@ -300,11 +281,11 @@ public void userPlayerDetails(String fname, String lname, String Gender, String 
 	
 	gender.click();
 	
-	dropdownClick(listValue, Gender);
+	c.dropdownClick(listValue, Gender);
 	
 	bloodGroup.click();
 	
-	dropdownClick(listValue, BloodGroup);
+	c.dropdownClick(listValue, BloodGroup);
 	
 	email.sendKeys(Keys.CONTROL + "a");
 	email.sendKeys(Keys.DELETE);
@@ -325,10 +306,10 @@ public void userPlayerDetails(String fname, String lname, String Gender, String 
 	pword.sendKeys(password);
 	
 	country.click();
-	dropdownClick(listValue, Country);
+	c.dropdownClick(listValue, Country);
 	
 	state.click();;
-	dropdownClick(listValue, State);
+	c.dropdownClick(listValue, State);
 	
 	address.sendKeys(Keys.CONTROL + "a");
 	address.sendKeys(Keys.DELETE);
@@ -336,12 +317,12 @@ public void userPlayerDetails(String fname, String lname, String Gender, String 
 	address.sendKeys(Address);
 	
 	role.click();
-	dropdownClick(listValue, Role);
+	c.dropdownClick(listValue, Role);
 	
 	Dob.sendKeys(dob);
 	
 	relationship.click();
-	dropdownClick(listValue, Relationship);
+	c.dropdownClick(listValue, Relationship);
 	
 	
 	parentname.sendKeys(Parentname);
@@ -352,36 +333,36 @@ public void userPlayerDetails(String fname, String lname, String Gender, String 
 	
 	Thread.sleep(3000);
 
-	Common.scrollToTop();
+	c.scrollToTop();
 	education.click();
-	dropdownClick(listValue, Education);
+	c.dropdownClick(listValue, Education);
 
 
 	pdegree.click();
-	dropdownClick(listValue, Edegree);
+	c.dropdownClick(listValue, Edegree);
 
 	height.sendKeys(Height);
 	weight.sendKeys(Weight);
 	
 	coachName.click();
-	dropdownClick(listValue, coachname);
+	c.dropdownClick(listValue, coachname);
 	
 	event.click();
 	Thread.sleep(2000);
 
-	dropdownClick(listValue, Event);
+	c.dropdownClick(listValue, Event);
 	
 	eventtype.click();
 	
 	Thread.sleep(3000);
 
-	dropdownClick(listValue, EventType);
+	c.dropdownClick(listValue, EventType);
 	
 	subevent.click();
 	
 	Thread.sleep(2000);
 
-	dropdownClick(listValue, SubEvent);
+	c.dropdownClick(listValue, SubEvent);
 	
 	Thread.sleep(2000);
 
@@ -415,7 +396,7 @@ public void userPlayerDetails(String fname, String lname, String Gender, String 
 		System.out.println("Player not created — it may already exist or Duplicate Value!");
 		okButton.click();
 		Thread.sleep(2000);
-		Common.scrollToTop();
+		c.scrollToTop();
 		Thread.sleep(3000);
 		backButton.click();
 

@@ -1,7 +1,8 @@
 package com.XIPerformer.actiondrivers;
 
-import org.testng.ITestContext;
+
 import org.testng.annotations.DataProvider;
+
 
 import com.XIPerformer.util.ExcelUtil;
 
@@ -50,18 +51,6 @@ public class DataProviderClass {
 	     return finalData;
 	 }
 	 
-//	 @DataProvider(name = "UserCoachData")
-//	    public Object[][] getusercoachData() throws Exception {
-//	        String filePath = System.getProperty("user.dir") + "\\Test Data\\UserDetail.xlsx";
-//	        return ExcelUtil.getExcelDateuser(filePath, "Coach");
-//	    }
-	 
-//	 @DataProvider(name = "UserPlayerData")
-//	    public Object[][] getuserplayerData() throws Exception {
-//	        String filePath = System.getProperty("user.dir") + "\\Test Data\\UserDetail.xlsx";
-//	        return ExcelUtil.getExcelDateuser(filePath, "Player");
-//	    }
-//	}
 	 @DataProvider(name = "UserPlayerData")
 	   public Object[][] getuserplayerData() throws Exception {
 	 String filePath = System.getProperty("user.dir") + "\\Test Data\\UserDetail.xlsx";
@@ -79,4 +68,23 @@ public class DataProviderClass {
 
      return finalData;
  }
+	 
+	 
+	 @DataProvider(name = "UserRegCoachData")
+	 public Object[][] getUserCoachData() throws Exception {
+
+	     String filePath = System.getProperty("user.dir") + "\\Test Data\\UserDetail.xlsx";
+	     String sheetName = "Sheet1";
+
+	     return ExcelUtil.getData(filePath, sheetName);
+	 }
+	 
+	 @DataProvider(name = "UserRegPlayerData")
+	 public Object[][] getUserPlayerData() throws Exception {
+
+	     String filePath = System.getProperty("user.dir") + "\\Test Data\\UserDetail.xlsx";
+	     String sheetName = "Sheet2";
+
+	     return ExcelUtil.getData(filePath, sheetName);
+	 }
 }

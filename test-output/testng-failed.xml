@@ -6,13 +6,14 @@
   </listeners>
   <test thread-count="1" name="XIPerformerTest(failed)">
     <classes>
-      <class name="com.XIPerformer.testcases.SanityManagerLogin">
+      <class name="com.XIPerformer.testcases.SanityManagerLoginUserReg">
         <methods>
-          <include name="teardown"/>
+          <include name="userRegisterDetailsForCoach" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="userRegisterDetailsForCoach" invocation-numbers="1 2 3"/>
+          <include name="userRegisterDetailsForPlayer" invocation-numbers="0"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.XIPerformer.testcases.SanityManagerLogin -->
+      </class> <!-- com.XIPerformer.testcases.SanityManagerLoginUserReg -->
     </classes>
   </test> <!-- XIPerformerTest(failed) -->
 </suite> <!-- Failed suite [XIPerformerTest] -->
