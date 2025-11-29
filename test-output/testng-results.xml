@@ -2,42 +2,42 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-28T17:16:25 IST" name="XIPerformerTest" finished-at="2025-11-28T17:18:48 IST" duration-ms="142561">
+  <suite started-at="2025-11-29T14:59:34 IST" name="XIPerformerTest" finished-at="2025-11-29T15:01:24 IST" duration-ms="110529">
     <groups>
     </groups>
-    <test started-at="2025-11-28T17:16:25 IST" name="XIPerformerTest" finished-at="2025-11-28T17:18:48 IST" duration-ms="142561">
+    <test started-at="2025-11-29T14:59:34 IST" name="XIPerformerTest" finished-at="2025-11-29T15:01:24 IST" duration-ms="110529">
       <class name="com.XIPerformer.testcases.SanityManagerLoginUserReg">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@17f7cd29]" started-at="2025-11-28T17:16:26 IST" name="setup" finished-at="2025-11-28T17:16:34 IST" duration-ms="8008" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@56f0cc85]" started-at="2025-11-29T14:59:34 IST" name="setup" finished-at="2025-11-29T14:59:41 IST" duration-ms="6888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginjourney()[pri:1, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@17f7cd29]" started-at="2025-11-28T17:16:34 IST" name="loginjourney" finished-at="2025-11-28T17:16:37 IST" duration-ms="3733" status="PASS">
+        <test-method signature="loginjourney()[pri:1, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@56f0cc85]" started-at="2025-11-29T14:59:41 IST" name="loginjourney" finished-at="2025-11-29T14:59:44 IST" duration-ms="3566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginjourney -->
-        <test-method signature="userRegisterDetailsForCoach(java.util.Map)[pri:2, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@17f7cd29]" started-at="2025-11-28T17:16:39 IST" name="userRegisterDetailsForCoach" data-provider="UserRegCoachData" finished-at="2025-11-28T17:17:39 IST" duration-ms="60449" status="PASS">
+        <test-method signature="userRegisterDetailsForCoach(java.util.Map)[pri:2, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@56f0cc85]" started-at="2025-11-29T14:59:45 IST" name="userRegisterDetailsForCoach" data-provider="UserRegCoachData" finished-at="2025-11-29T15:00:30 IST" duration-ms="44709" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Timestamp=11/27/2025 18:52:16, Email Address=dhoni@gmail.com, Academy Name=XIFT Academy and Research, FIrst Name=dhoni, Last Name=ms, Email ID (For Login)=dhoni@gmail.com, Mobile Number=1234567895, Date of Birth=11/27/2000, Gender=Male, Specialized in=60 m, 4x100 m Relay, High Jump, Cricket, Educational Qualification=BA - Tamil, Experience=56, Sp [Row 1]=, =}]]>
+                <![CDATA[{Timestamp=11/27/2025 18:52:16, Email Address=TestXI5@gmail.com, Academy Name=XIFT Academy and Research, FIrst Name=dhoni, Last Name=ms, Email ID (For Login)=TestXI24@gmail.com, Mobile Number=1234567895, Date of Birth=11/27/2000, Gender=Male, Specialized in=60 m, 4x100 m Relay, Educational Qualification=BA - Tamil, Experience=56, Sp [Row 1]=, =}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegisterDetailsForCoach -->
-        <test-method signature="userRegisterDetailsForPlayer(java.util.Map)[pri:3, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@17f7cd29]" started-at="2025-11-28T17:17:39 IST" name="userRegisterDetailsForPlayer" data-provider="UserRegPlayerData" finished-at="2025-11-28T17:18:44 IST" duration-ms="64588" status="PASS">
+        <test-method signature="userRegisterDetailsForPlayer(java.util.Map)[pri:3, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@56f0cc85]" started-at="2025-11-29T15:00:30 IST" name="userRegisterDetailsForPlayer" data-provider="UserRegPlayerData" finished-at="2025-11-29T15:01:21 IST" duration-ms="50390" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Timestamp=, Academy Name=, Coach Name=Arun Appavo, First Name=santhosh, Last Name=oth, College Roll/ID Number=12345, Mobile Number=1234567890, Date of Birth=35345, Gender=Male, Parental Relatonship=Parent, Parent / Guardian Name=vivek, Parent Mobile Number=8675798564, Sub Events=Discus Throw,  200 m, Cricket, Education=College, Name of the School or College=, Board (If School)=, Degree (If College)=B.Sc - Computer Science, Standard (If School)=, Score=, Email Address=, Email ID (For Login)=santhosh@gmail.com, =}]]>
+                <![CDATA[{Timestamp=, Academy Name=, Coach Name=Arun Appavo, First Name=santhosh, Last Name=oth, College Roll/ID Number=12345, Mobile Number=1234567890, Date of Birth=35345, Gender=Male, Parental Relatonship=Parent, Parent / Guardian Name=vivek, Parent Mobile Number=8675798564, Sub Events=Discus Throw,  200 m, Education=College, Name of the School or College=, Board (If School)=, Degree (If College)=B.Sc - Computer Science, Standard (If School)=, Score=, Email Address=, Email ID (For Login)=TestXI23@gmail.com, =}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegisterDetailsForPlayer -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@17f7cd29]" started-at="2025-11-28T17:18:44 IST" name="teardown" finished-at="2025-11-28T17:18:48 IST" duration-ms="3698" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.XIPerformer.testcases.SanityManagerLoginUserReg@56f0cc85]" started-at="2025-11-29T15:01:21 IST" name="teardown" finished-at="2025-11-29T15:01:24 IST" duration-ms="3436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

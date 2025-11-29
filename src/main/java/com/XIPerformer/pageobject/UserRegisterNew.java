@@ -1,16 +1,20 @@
 package com.XIPerformer.pageobject;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.XIPerformer.util.Commonmethods;
+import com.XIPerformer.util.ExtentTestManager;
 import com.automation.base.BaseClass;
 import java.util.function.Function;
 
@@ -137,9 +141,17 @@ public class UserRegisterNew extends BaseClass {
 	@FindBy(xpath = "//button[@class='swal2-confirm _confirmButton_vrom6_139 swal2-styled']")
 	WebElement oktButton;
 	
+	@FindBy(xpath = "//input[@type='checkbox']")
+	WebElement checkbox;
+	
 	@FindBy(xpath = "//button[@aria-label='Back']")
 	WebElement backButton;
 	
+	@FindBy(xpath = "//button[@aria-label='Go to next page']]")
+	WebElement lastpage;
+	
+	@FindBy(xpath = "//div[@class='_ULRoleCon_sc8ji_183  MuiBox-root css-0']/p[contains(text(),'Player')]")
+	WebElement playerbutton;
 	
 	
 	
@@ -280,7 +292,10 @@ public class UserRegisterNew extends BaseClass {
 	        eventtype.click();
 	        c.dropdownClick(listValue, eventType);
 
+	        
 	        subevent.click();
+	        Thread.sleep(2000);
+
 	        c.dropdownClick(listValue, sub.trim());
 
 		    Thread.sleep(2000);
@@ -298,7 +313,8 @@ public class UserRegisterNew extends BaseClass {
 	            oktButton.click();
 	        }
 	    } catch (NoSuchElementException ignored) {}
-
+	    
+	    checkbox.click();
 	    Thread.sleep(3000);
 	    submit.click();
 	    Thread.sleep(3000);
@@ -306,6 +322,34 @@ public class UserRegisterNew extends BaseClass {
 	    if (Message.getText().equals("The Coach Has Been Created Successfully!")) {
 	        System.out.println("Coach Created Successfully");
 	        okButton.click();
+		    Thread.sleep(3000);
+
+
+		 while (true) {
+		     WebElement nextBtn = driver.findElement(By.xpath("//button[@aria-label='Go to next page']"));
+
+		     if (nextBtn.getAttribute("disabled") != null) {
+		         break;
+		     }
+
+		     nextBtn.click();
+		     Thread.sleep(500);   
+		 }
+
+		 List<WebElement> rows = driver.findElements(By.xpath("//div[@role='row' and @data-rowindex]"));
+		 int lastIndex = rows.size();
+		 
+		 System.out.println(lastIndex);
+
+		 String latestUserId = driver.findElement(
+		         By.xpath("//div[@role='row'][" + lastIndex + "]//div[@data-field='userId']")
+		 ).getText();
+		 
+		 ExtentTestManager.getTest().info(" User ID: " + latestUserId);
+
+		 System.out.println(" User ID = " + latestUserId);
+
+	        
 	    } else {
 	        System.out.println("Coach not created (duplicate or error)");
 	        okButton.click();
@@ -314,8 +358,12 @@ public class UserRegisterNew extends BaseClass {
 	        Thread.sleep(2000);
 	        backButton.click();
 
+	        
+	       
 	    }
+	    
 	}
+
 
 
 
@@ -514,6 +562,35 @@ public class UserRegisterNew extends BaseClass {
 	    if (Message.getText().equals("The Player Has Been Created Successfully!")) {
 	        System.out.println("Player Created Successfully");
 	        okButton.click();
+	        
+		    Thread.sleep(2000);
+  
+	        playerbutton.click();
+	        
+	        while (true) {
+			     WebElement nextBtn = driver.findElement(By.xpath("//button[@aria-label='Go to next page']"));
+
+			     if (nextBtn.getAttribute("disabled") != null) {
+			         break;
+			     }
+
+			     nextBtn.click();
+			     Thread.sleep(500);   
+			 }
+
+			 List<WebElement> rows = driver.findElements(By.xpath("//div[@role='row' and @data-rowindex]"));
+			 int lastIndex = rows.size();
+			 
+			 System.out.println(lastIndex);
+
+			 String latestUserId = driver.findElement(
+			         By.xpath("//div[@role='row'][" + lastIndex + "]//div[@data-field='userId']")
+			 ).getText();
+			 
+			 ExtentTestManager.getTest().info("User ID: " + latestUserId);
+
+			 System.out.println(" User ID = " + latestUserId);
+
 	    } else {
 	        System.out.println("Player not created — it may already exist or Duplicate Value!");
 	        okButton.click();
